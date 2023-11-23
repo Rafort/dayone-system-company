@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+  <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js">
+  </script>
+  <title>DayOne System</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/icon.png">
+</head>
+
+<body class="bd-color">
+  <!-- Navbar -->
+  <nav class="navbar sticky-top navbar-dark nav-color">
+    <a class="navbar-brand" href="home.html"><img src="assets/img/logo-dayone.png" class="d-inline-block align-top" height="26px"></a>
+    <div class="navbar-nav justify-content-end ml-auto">
+      <div class="nav-profile mr-3 text-light text-right">Siemens Brasil</div>
+      <div class="nav-profile2 mr-3 text-light text-right">Roberto</div>
+    </div>
+    <button class="navbar-toggler border-0" type="button" data-toggle="dropdown" data-target="#navbar" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" aria-haspopup="true" id="dropdown01">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbar" >
+      <div class="dropdown-menu megamenu" aria-labelledby="dropdown01" >
+        <div class="row">
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Colaboradores</h6>
+            <a class="dropdown-item" href="colaboradores.html">Geral</a>
+            <a class="dropdown-item" href="cadastrar-colaborador.html">Cadastrar</a>
+            <a class="dropdown-item" href="filtrar-colaborador.html">Filtrar</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Organização</h6>
+            <a class="dropdown-item" href="sedes.html">Sedes</a>
+            <a class="dropdown-item" href="setores.html">Setores</a>
+            <a class="dropdown-item" href="turnos.html">Turnos</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Controle de Apps</h6>
+            <a class="dropdown-item" href="apps.html">Lista de Apps</a>
+            <a class="dropdown-item" href="modelo-de-controle.html">Modelo de controle</a>
+            <a class="dropdown-item" href="relatorio.html">Relatório</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Faturas</h6>
+            <a class="dropdown-item" href="faturas.html">Histórico</a>
+            <a class="dropdown-item" href="faturas-abertas.html">Faturas abertas</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Suporte</h6>
+            <a class="dropdown-item" href="abrir-chamado.html">Abrir chamado</a>
+            <a class="dropdown-item" href="chamados.html">Meus chamados</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Perfil</h6>
+            <a class="dropdown-item" href="perfil.html">Meu perfil</a>
+            <a class="dropdown-item" href="#" data-target="#logout" data-toggle="modal">Logout <i class="fa fa-sign-out ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="">
+    <div class="container-fluid">
+      <!-- Content Row -->
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-12" >
+          <div class="page-header">
+            <div class="page-title">
+              <a href="#" onclick="history.back()"><i class="ti-angle-left float-left mr-2 mt-1"></i></a>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="faturas.html">Faturas</a></li>
+                <li class="breadcrumb-item active">Fatura</li>
+              </ol>
+              <h4>Faturas</h4>
+              <div class="btn-group"> <a href="faturas.html" class="btn btn-link pl-1">Histórico</a> <a href="faturas-abertas.html" class="btn btn-link">Faturas abertas</a> </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h5 class="text-primary">Fatura</h5>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="text-center col-lg-1"> </div>
+        <div class="col-lg-11 col-12">
+          <div class="row">
+            <div class="mb-2 col-md-8 col-lg-8">
+              <div class="row">
+                <div class="col-md-12 border-bottom mb-2 pl-0">
+                  <p class="tt-h55 my-2">2023 Outubro</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-4 pl-0" >
+                  <h6 class="">Vencimento:</h6>
+                  <p>15/10/2023</p>
+                </div>
+                <div class="col-md-4 col-4 pl-0" >
+                  <h6 class="">Valor:</h6>
+                  <p class="">R$ 9500,00</p>
+                </div>
+                <div class="col-md-4 col-4 px-0" >
+                  <h6>Status:</h6>
+                  <p class="text-success">Paga</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 border-top  px-0">
+                  <div class="col-xs-8 col-12 col-lg-12 px-0" >
+                    <h6 class="">Pagamento efetuado em:</h6>
+                    <p>15/10/2023</p>
+                  </div>
+                </div>
+                <div class="col-12 pb-3 pt-2 col-lg-12 flex-row align-items-center d-inline-flex justify-content-around">
+                  <a class="btn btn-outline-primary btn-sm m-1 mr-1" href="faturas.html">Voltar para faturas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row mt-2 mb-5"> </div>
+      <!-- Content Row -->
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="py-2 my-0 bg-secondary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0 text-light small">© DayOne System</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Modal logout -->
+  <div class="modal fade mt-2" id="logout">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-primary mt-0">Logout</h4> <button type="button" class="close" data-dismiss="modal"> <span>×</span> </button>
+        </div>
+        <div class="modal-body">
+          <p>Deseja encerrar a sessão?</p>
+        </div>
+        <div class="modal-footer">
+          <a class="btn px-3 btn-secondary" href="index.html">Sair</a>
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Voltar</button> </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+  <script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- bootstrap -->
+  <script src="assets/js/lib/bootstrap.min.js" ></script>
+  <script src="assets/js/scripts.js" ></script>
+  
+  
+</body>
+
+</html>

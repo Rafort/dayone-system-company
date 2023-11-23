@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+  <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js">
+  </script>
+  <title>DayOne System</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/icon.png">
+</head>
+
+<body class="bd-color">
+  <!-- Navbar -->
+  <nav class="navbar sticky-top navbar-dark nav-color">
+    <a class="navbar-brand" href="home.html"><img src="assets/img/logo-dayone.png" class="d-inline-block align-top" height="26px"></a>
+    <div class="navbar-nav justify-content-end ml-auto">
+      <div class="nav-profile mr-3 text-light text-right">Siemens Brasil</div>
+      <div class="nav-profile2 mr-3 text-light text-right">Roberto</div>
+    </div>
+    <button class="navbar-toggler border-0" type="button" data-toggle="dropdown" data-target="#navbar" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" aria-haspopup="true" id="dropdown01">
+      <span class="navbar-toggler-icon" ></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbar" >
+      <div class="dropdown-menu megamenu" aria-labelledby="dropdown01" >
+        <div class="row">
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Colaboradores</h6>
+            <a class="dropdown-item" href="colaboradores.html">Geral</a>
+            <a class="dropdown-item" href="cadastrar-colaborador.html">Cadastrar</a>
+            <a class="dropdown-item" href="filtrar-colaborador.html">Filtrar</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Organização</h6>
+            <a class="dropdown-item" href="sedes.html">Sedes</a>
+            <a class="dropdown-item" href="setores.html">Setores</a>
+            <a class="dropdown-item" href="turnos.html">Turnos</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Controle de Apps</h6>
+            <a class="dropdown-item" href="apps.html">Lista de Apps</a>
+            <a class="dropdown-item" href="modelo-de-controle.html">Modelo de controle</a>
+            <a class="dropdown-item" href="relatorio.html">Relatório</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Faturas</h6>
+            <a class="dropdown-item" href="faturas.html">Histórico</a>
+            <a class="dropdown-item" href="faturas-abertas.html">Faturas abertas</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Suporte</h6>
+            <a class="dropdown-item" href="abrir-chamado.html">Abrir chamado</a>
+            <a class="dropdown-item" href="chamados.html">Meus chamados</a>
+          </div>
+          <div class="col-sm-6 col-lg-2 col-6 py-3">
+            <h6>Perfil</h6>
+            <a class="dropdown-item" href="perfil.html">Meu perfil</a>
+            <a class="dropdown-item" href="#" data-target="#logout" data-toggle="modal">Logout <i class="fa fa-sign-out ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="">
+    <div class="container-fluid">
+      <!-- Content Row -->
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-12" >
+          <div class="page-header">
+            <div class="page-title">
+              <a href="#" onclick="history.back()"><i class="ti-angle-left float-left mr-2 mt-1"></i></a>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item active">Relatório</li>
+              </ol>
+              <h4>Controle de Apps</h4>
+              <div class="btn-group"> <a href="apps.html" class="btn btn-link pl-1">Lista de Apps</a> <a href="modelo-de-controle.html" class="btn btn-link">Modelo de controle</a> <a href="relatorio.html" class="btn btn-link">Relatório</a> </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      <div class="row">
+        <div class="col-lg-12 d-flex flex-row justify-content-between align-items-center">
+          <h5 class="text-primary">Relatório</h5>
+          <div class="form-group float-right my-0">
+            <select id="sel-periodo" class="form-control" name="Periodo">
+              <option value="0">Últimos 7 dias</option>
+              <option value="1">Últimos 14 dias</option>
+              <option value="2">Últimos 30 dias</option>
+            </select>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-lg-3 order-2 order-lg-1">
+          <div class="card bg-secondary text-light">
+            <div class="card-title">
+              <h4 class="text-light">Filtrar registros</h4>
+            </div>
+            <div class="card-body">
+              <div class="col-md-12 py-0 mt-2">
+                <h6 class="mb-0">Data inicial:</h6>
+              </div>
+              <div class="form-group col-md-12 col-12 mb-0">
+                <input type="date" class="form-control" name="inicial">
+              </div>
+              <div class="col-md-12 py-0 mt-2">
+                <h6 class="mb-0">Data final:</h6>
+              </div>
+              <div class="form-group col-md-12 col-12 mb-0">
+                <input type="date" class="form-control" name="inicial">
+              </div>
+              <div class="form-group col-md-12 mt-1 mb-0 pt-2 pb-2 small">
+                <h6 class="mb-1">OS:</h6>
+                <div class="custom-control custom-radio custom-control-inline mx-3">
+                  <input type="radio" id="android" name="os" class="custom-control-input">
+                  <label class="custom-control-label  pt-1" for="android">Android</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline mx-3">
+                  <input type="radio" id="ios" name="os" class="custom-control-input">
+                  <label class="custom-control-label pt-1" for="ios">iOS</label>
+                </div>
+              </div>
+              <div class="form-group col-md-12 col-12 mb-0">
+                <select id="sel-sede" class="form-control mt-1" name="Sede">
+                  <option value="0">Todas as sedes</option>
+                  <option value="1">Curitiba</option>
+                  <option value="2">São Paulo</option>
+                </select>
+              </div>
+              <div class="form-group col-md-12 col-12 mb-0">
+                <select id="sel-setor" class="form-control mt-1" name="Setor">
+                  <option value="0">Todos os setores</option>
+                  <option value="1">Administração</option>
+                  <option value="2">Comercial</option>
+                  <option value="3">Logística</option>
+                  <option value="4">Operação</option>
+                </select>
+              </div>
+              <div class="form-group col-md-12 col-12 mb-0">
+                <select id="sel-exp" class="form-control mt-1" name="Turnos">
+                  <option value="0">Todos os turnos</option>
+                  <option value="1">Diurno</option>
+                  <option value="2">Vespertino</option>
+                  <option value="3">Noturno</option>
+                </select>
+              </div>
+              <div class="form-group col-md-12 col-12 mb-0">
+                <select id="sel-exp" class="form-control mt-1" name="Mdelos">
+                  <option value="0">Todos os modelos de controle</option>
+                  <option value="1">Padrão 1</option>
+                  <option value="2">Padrão 2</option>
+                  <option value="3">Restritivo</option>
+                </select>
+              </div>
+              <div class="col-md-12 col-12 mb-0 d-flex justify-content-center">
+                <a class="btn btn-primary px-3 my-2" href="#">Filtrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-12 order-1 order-lg-2">
+          <div class="row">
+            <div class="col-md-12 m-0 p-0">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="card mt-0 h-100">
+                    <div class="card-title">
+                      <h4 class="mb-1">Média por colaborador&nbsp;</h4>
+                      <h6>Uso dos Apps em minutos</h6>
+                    </div>
+                    <div class="card-body">
+                      <canvas id="plots" height="150"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mt-0 h-100">
+                    <div class="card-title">
+                      <h4 class="mb-1">Média por Setor</h4>
+                      <h6>Uso dos Apps em minutos</h6>
+                    </div>
+                    <div class="card-body">
+                      <canvas id="pies"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card mt-0">
+                    <div class="card-title">
+                      <h4 class="mb-1">Principais Apps usados&nbsp;</h4>
+                      <h6 contenteditable="true">Uso médio diário em minutos</h6>
+                    </div>
+                    <div class="card-body">
+                      <canvas id="barChart1" height="150"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!-- Content Row -->
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="py-2 my-0 bg-secondary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0 text-light small">© DayOne System</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Modal logout -->
+  <div class="modal fade mt-2" id="logout">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-primary mt-0">Logout</h4> <button type="button" class="close" data-dismiss="modal"> <span>×</span> </button>
+        </div>
+        <div class="modal-body">
+          <p>Deseja encerrar a sessão?</p>
+        </div>
+        <div class="modal-footer">
+          <a class="btn px-3 btn-secondary" href="index.html">Sair</a>
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Voltar</button> </div>
+      </div>
+    </div>
+  </div>
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"></script>
+  
+  <!-- bootstrap -->
+  <script src="assets/js/lib/bootstrap.min.js" ></script>
+  <script src="assets/js/scripts.js" ></script>
+  <!-- // Chart js -->
+  <script src="assets/js/lib/chart-js/Chart.bundle.js"></script>
+  <script src="assets/js/lib/chart-js/chartjs-init.js" ></script>
+  <script src="assets/js/plot.js"></script>
+  <script src="assets/js/plot2.js"></script>
+  <!-- Datatables-->
+  <script src="assets/js/lib/data-table/datatables.min.js"></script>
+  <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+  <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
+  <script src="assets/js/lib/data-table/datatables-init.js"></script>
+  
+  
+</body>
+
+</html>
